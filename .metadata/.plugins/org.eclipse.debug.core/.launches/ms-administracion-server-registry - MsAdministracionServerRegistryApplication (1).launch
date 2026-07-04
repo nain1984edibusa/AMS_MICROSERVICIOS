@@ -12,7 +12,7 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.buildship.core.classpathprovider"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="gob.mdmq.coretributario.msadministracionserverregistry.MsAdministracionServerRegistryApplication"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.ebustillos.ms.administracion.serverregistry.MsAdministracionServerRegistryApplication"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ms-administracion-server-registry"/>
     <stringAttribute key="process_factory_id" value="org.springframework.ide.eclipse.boot.launch.process.BootProcessFactory"/>
     <booleanAttribute key="spring.boot.ansi.console" value="true"/>

@@ -1,4 +1,4 @@
-package gob.mdmq.coretributario.msadministracionserverregistry;
+package com.ebustillos.ms.administracion.serverregistry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
