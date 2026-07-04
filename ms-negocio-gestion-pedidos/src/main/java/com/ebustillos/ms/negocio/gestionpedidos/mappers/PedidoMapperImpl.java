@@ -15,6 +15,7 @@ public class PedidoMapperImpl implements PedidoMapper {
 	public PedidoDto toDTO(PedidoEntity e) {
 		 return PedidoDto.builder()
 	                .idPedido(e.getIdPedido())
+	                .idCliente(e.getIdCliente())
 	                .resumen(e.getResumen())
 	                .total(e.getTotal())
 	                .listDetallePedido(

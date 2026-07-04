@@ -16,7 +16,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,6 +32,9 @@ public class PedidoEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pedido")
     private Long idPedido;
+	
+	 @Column(name = "id_cliente")
+	    private Long idCliente;
 
     @Column(name = "resumen")
     private String resumen;

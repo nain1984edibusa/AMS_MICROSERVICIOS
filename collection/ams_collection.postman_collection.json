@@ -88,7 +88,7 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                  "raw": "http://localhost:8193/api/v1/pedidos/7",
+                  "raw": "http://localhost:8193/api/v1/pedidos/9",
                   "protocol": "http",
                   "host": [
                     "localhost"
@@ -98,7 +98,7 @@
                     "api",
                     "v1",
                     "pedidos",
-                    "7"
+                    "9"
                   ]
                 }
               },
