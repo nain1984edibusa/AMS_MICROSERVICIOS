@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: ms-negocio-gestion-clientes
-  config:
-        import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
-        
-# Para dockerizar
-#  config:
-#    import: optional:configserver:http://server-config:8888

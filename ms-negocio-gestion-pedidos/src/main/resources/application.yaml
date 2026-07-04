@@ -1,5 +1,5 @@
 server:
-   port: 8093
+   port: 8193
 spring:
   application:
     name: ms-negocio-gestion-pedidos
