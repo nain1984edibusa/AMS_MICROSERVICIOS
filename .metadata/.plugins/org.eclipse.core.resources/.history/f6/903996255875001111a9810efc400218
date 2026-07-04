@@ -1,0 +1,17 @@
+package com.ebustillos.ms.negocio.gestionpedidos.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PedidoDto {
+   
+    private Long idPedido;
+    private String resumen;
+    private Double total;
+}

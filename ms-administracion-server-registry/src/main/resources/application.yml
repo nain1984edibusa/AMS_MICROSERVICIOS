@@ -1,0 +1,22 @@
+server:
+  port: 8889
+
+spring:
+    application:
+        name:  ms-administracion-server-registry
+    config:
+        import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
+ 
+#configuracion docker 
+#spring:
+#  application:
+#    name: ms-administracion-server-registry
+#  cloud:
+#    config:
+#      enabled: false   # 🔥 clave
+#eureka:
+#  instance:
+#    hostname: eureka-server
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false

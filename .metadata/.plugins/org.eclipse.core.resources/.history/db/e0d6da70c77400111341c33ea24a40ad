@@ -1,0 +1,16 @@
+server:
+   port: 8099
+spring:
+  application:
+    name: ms-negocio-gestion-pedidos
+  datasource: 
+    url: jdbc:sqlserver://localhost;trustServerCertificate=true;databaseName=db_ms_pedidos
+    username: sa
+    password: P@ssword1234
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    
+  jpa: 
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    hibernate: 
+      ddl-auto: none
+    show-sql: true  

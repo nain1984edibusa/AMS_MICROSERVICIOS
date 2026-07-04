@@ -1,0 +1,28 @@
+MS - ADMINISTRACION
+-------------------------------------------------
+
+ms-administracion-api-gateway					8887
+ms-administracion-server-config					8888
+ms-administracion-server-registry				8889
+ms-administracion-server-admin			    	8890
+
+MS - NEGOCIO
+-------------------------------------------------						
+ms-negocio-gestion-clientes						8190
+ms-negocio-gestion-productos					8191
+ms-negocio-gestion-usuarios						8192
+ms-negocio-gestion-pedidos						8193
+
+MS - AUTHETICACION
+-------------------------------------------------
+ms-autenticacion-jwt							8080
+
+MS - PARAMETRIZACION
+-------------------------------------------------
+ms-parametrizacion								8290
+
+
+HERRAMIENTA - MONITOREO
+-------------------------------------------------
+grafana											3000
+prometheus										9090

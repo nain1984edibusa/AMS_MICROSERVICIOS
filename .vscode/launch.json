@@ -1,0 +1,107 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "MsAdministracionServerConfigApplication",
+            "request": "launch",
+            "mainClass": "com.ebustillos.ms.administracion.serverconfig.MsAdministracionServerConfigApplication",
+            "projectName": "ms-administracion-server-config"
+        },
+        {
+            "type": "java",
+            "name": "MsAdministracionServerRegistryApplication",
+            "request": "launch",
+            "mainClass": "com.ebustillos.ms.administracion.serverregistry.MsAdministracionServerRegistryApplication",
+            "projectName": "ms-administracion-server-registry"
+        },
+        {
+            "type": "java",
+            "name": "MsNegocioGestionClientesApplication",
+            "request": "launch",
+            "mainClass": "pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.MsNegocioGestionClientesApplication",
+            "projectName": "ms-negocio-gestion-clientes",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60668 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-negocio-gestion-clientes"
+        },
+        {
+            "type": "java",
+            "name": "MsNegocioGestionProductosApplication",
+            "request": "launch",
+            "mainClass": "pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionproductos.MsNegocioGestionProductosApplication",
+            "projectName": "ms-negocio-gestion-productos"
+        },
+        {
+            "type": "java",
+            "name": "MsNegocioGestionUsuariosApplication",
+            "request": "launch",
+            "mainClass": "com.ebustillos.msnegociogestionusuarios.MsNegocioGestionUsuariosApplication",
+            "projectName": "ms-negocio-gestion-usuarios"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsAdministracionServerConfigApplication<ms-administracion-server-config>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "gob.mdmq.coretributario.msadministracionserverconfig.MsAdministracionServerConfigApplication",
+            "projectName": "ms-administracion-server-config",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=38388 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-administracion-server-config"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsAdministracionServerRegistryApplication<ms-administracion-server-registry>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "gob.mdmq.coretributario.msadministracionserverregistry.MsAdministracionServerRegistryApplication",
+            "projectName": "ms-administracion-server-registry",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=42294 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-administracion-server-registry"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsNegocioGestionClientesApplication<ms-negocio-gestion-productos>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.MsNegocioGestionClientesApplication",
+            "projectName": "ms-negocio-gestion-productos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsNegocioGestionPedidosApplication<ms-negocio-gestion-pedidos>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.bustillos.ms.negocio.gestionpedidos.MsNegocioGestionPedidosApplication",
+            "projectName": "ms-negocio-gestion-pedidos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsNegocioGestionPedidosApplication<ms-negocio-gestion-pedidos>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ebustillos.ms.negocio.gestionpedidos.MsNegocioGestionPedidosApplication",
+            "projectName": "ms-negocio-gestion-pedidos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

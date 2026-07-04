@@ -1,0 +1,58 @@
+package com.ebustillos.ms.negocio.gestionpedidos.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.ebustillos.ms.negocio.gestionpedidos.dto.*;
+import com.ebustillos.ms.negocio.gestionpedidos.mappers.*;
+import com.ebustillos.ms.negocio.gestionpedidos.repository.*;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class PedidoServiceImpl implements PedidoService {
+	
+	private final PedidoRepository usuarioRepository;
+	private final PedidoMapper usuarioMapper;
+
+	@Override
+	public List<PedidoDto> findAll() throws ServiceException {
+		
+		return this.usuarioMapper.toDTO(this.usuarioRepository.findAll());
+	}
+
+	@Override
+	public List<PedidoDto> findByLikeObject(PedidoDto t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PedidoDto save(PedidoDto t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PedidoDto update(PedidoDto t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) throws ServiceException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Optional<PedidoDto> findById(Long id) throws ServiceException {
+		// TODO Auto-generated method stub
+		return usuarioRepository.findById(id)
+	            .map(usuarioMapper::toDTO); // Si existe, lo mapea; si no, devuelve Optional.empty()
+	}
+
+}

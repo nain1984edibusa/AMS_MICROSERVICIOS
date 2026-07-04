@@ -1,0 +1,12 @@
+package com.ebustillos.ms.negocio.gestionpedidos.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.ebustillos.ms.negocio.gestionpedidos.entity.PedidoEntity;
+import com.ebustillos.msnegociogestionusuarios.entity.UsuarioEntity;
+
+@Repository
+public interface PedidoRepository extends JpaRepository<PedidoEntity, Long>{
+
+}

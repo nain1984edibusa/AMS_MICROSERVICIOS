@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ms-negocio-gestion-productos/src/main/resources/scripts/clientes.sql&apos; to &apos;producto.sql&apos;" description="Rename resource &apos;clientes.sql&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/scripts/clientes.sql" name="producto.sql" stamp="1775686459475" updateReferences="true"/>
+</session>

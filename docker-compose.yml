@@ -1,0 +1,131 @@
+services:
+  server-config:
+    image: server-config.service:1.0.0 #nombre de la imagen que hemos creado
+    restart: always
+    container_name: server-config
+    build:
+      context: ./ms-administracion-server-config
+      dockerfile: Dockerfile
+    ports:
+      - "18888:8888"
+    volumes:
+      - ./config-repo:/config   # 👈 CLAVE
+    networks:
+      - microservicios
+  eureka-server:
+    image: server-registry.service:1.0.0
+    container_name: eureka-server
+    build:
+      context: ./ms-administracion-server-registry
+      dockerfile: Dockerfile
+    ports:
+      - "18889:8889"
+    networks:
+      - microservicios
+
+  user.service:
+    image: usuarios.service:1.0.0
+    container_name: user.service
+    build:
+      context: ./ms-negocio-gestion-usuarios
+      dockerfile: Dockerfile
+    ports:
+      - "8093:8093"
+    networks:
+      - microservicios
+
+  cliente.service:
+    image: clientes.service:1.0.0
+    container_name: cliente.service
+    build:
+      context: ./ms-negocio-gestion-clientes
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    depends_on:
+      - mysql_clientes_dev
+      - eureka-server
+      - server-config
+    networks:
+      - microservicios
+
+  producto.service:
+    image: productos.service:1.0.0
+    container_name: producto.service
+    build:
+      context: ./ms-negocio-gestion-productos
+      dockerfile: Dockerfile
+    ports:
+      - "8091:8091"
+    depends_on:
+      mysql_productos_dev:
+        condition: service_healthy
+      eureka-server:
+        condition: service_started
+      server-config:
+        condition: service_started
+    networks:
+      - microservicios
+
+  mysql_usuario_dev:
+    container_name: mysql_usuario_dev
+    image: mysql:8.0.36
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: db_ms_usuarios
+      MYSQL_USER: userdev
+      MYSQL_PASSWORD: Test@123
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3310:3306"
+    networks:
+      - microservicios
+
+  mysql_clientes_dev:
+    container_name: mysql_clientes_dev
+    image: mysql:8.0.36
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: db_ms_clientes
+      MYSQL_USER: userdev
+      MYSQL_PASSWORD: Test@123
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
+    networks:
+      - microservicios    
+ 
+  mysql_productos_dev:
+    container_name: mysql_productos_dev
+    image: mysql:8.0.36
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: db_ms_productos
+      MYSQL_USER: userdev
+      MYSQL_PASSWORD: Test@123
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3309:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - microservicios  
+
+  sqlserver:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA= "Y"
+      - MSSQL_SA_PASSWORD=P@ssword1234    
+    ports:
+      - 1433:1433    
+    mem_limit: 2g
+    networks:
+      - microservicios 
+networks:
+  microservicios:
+    name: microservicios
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ms-negocio-gestion-productos.yml&apos; to &apos;ms-administracion-server-config/src/main/resources/config&apos;&#x0D;&#x0A;- Original project: &apos;ms-administracion-server-config&apos;&#x0D;&#x0A;- Destination element: &apos;ms-administracion-server-config/src/main/resources/config&apos;&#x0D;&#x0A;- Original element: &apos;ms-negocio-gestion-productos.yml&apos;" description="Copy file" destination="/src\/main\/resources=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;config" element1="src/main/resources/config/ms-negocio-gestion-productos.yml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1782845698422" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,17 @@
+package com.ebustillos.ms.negocio.gestionpedidos.mappers;
+
+import java.util.List;
+
+import com.ebustillos.ms.negocio.gestionpedidos.dto.*;
+import com.ebustillos.ms.negocio.gestionpedidos.entity.*;
+
+public interface DetallePedidoMapper {
+
+	PedidoDto toDTO(PedidoEntity e);
+	
+	List<PedidoDto> toDTO(List<PedidoEntity>lst);
+	
+	
+	
+	
+}

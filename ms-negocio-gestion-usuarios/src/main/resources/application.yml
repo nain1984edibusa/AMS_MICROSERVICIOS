@@ -1,0 +1,18 @@
+server:
+   port: 8093
+   
+spring:
+  application:
+    name: ms-negocio-gestion-usuarios
+
+  datasource: 
+    url: jdbc:mysql://mysql_usuario_dev:3306/db_ms_usuarios?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    #url: jdbc:mysql://localhost:3310/db_ms_usuarios?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: userdev
+    password: Test@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa: 
+    hibernate: 
+      ddl-auto: create
+    show-sql: true

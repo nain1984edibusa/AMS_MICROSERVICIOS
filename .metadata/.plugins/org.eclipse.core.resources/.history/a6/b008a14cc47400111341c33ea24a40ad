@@ -1,0 +1,70 @@
+package com.ebustillos.ms.negocio.gestionpedidos.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.ebustillos.ms.negocio.gestionpedidos.dto.*;
+import com.ebustillos.ms.negocio.gestionpedidos.entity.PedidoEntity;
+import com.ebustillos.ms.negocio.gestionpedidos.mappers.*;
+import com.ebustillos.ms.negocio.gestionpedidos.repository.*;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class PedidoServiceImpl implements PedidoService {
+
+	private final PedidoRepository pedidoRepository;
+	private final PedidoMapper pedidoMapper;
+
+	@Override
+	public Optional<PedidoDto> findById(Long id) throws ServiceException {
+		try {
+			Optional<PedidoEntity> optPedidoEntity =  pedidoRepository.findById(id);
+			if (optPedidoEntity.isPresent()) {
+				PedidoEntity pedidoEntity = optPedidoEntity.get();
+
+				PedidoDto pedidoDto = pedidoMapper.toDTO(pedidoEntity); 
+
+				return Optional.ofNullable(pedidoDto);
+			}
+			return null;
+
+		} catch (Exception e) {
+			throw new ServiceException();
+		}
+	}
+
+	@Override
+	public List<PedidoDto> findAll() throws ServiceException {
+
+		return this.pedidoMapper.toDTO(this.pedidoRepository.findAll());
+	}
+
+	@Override
+	public List<PedidoDto> findByLikeObject(PedidoDto t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PedidoDto save(PedidoDto t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public PedidoDto update(PedidoDto t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(Long id) throws ServiceException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

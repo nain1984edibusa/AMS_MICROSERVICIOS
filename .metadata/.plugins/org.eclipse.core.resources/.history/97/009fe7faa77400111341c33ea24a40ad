@@ -1,0 +1,7 @@
+package com.ebustillos.ms.negocio.gestionpedidos.services;
+
+import com.ebustillos.msnegociogestionusuarios.dto.UsuarioDto;
+
+public interface PedidoService extends GenericService<PedidoDto>{
+
+}

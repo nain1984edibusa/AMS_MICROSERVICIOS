@@ -1,0 +1,12 @@
+docker images
+
+docker ps
+
+
+docker pull mysql
+
+docker run --name mysql-dev  -p3307:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+
+docker exec -it mysql-dev bash
+
+mysql -uroot -p123456

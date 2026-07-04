@@ -1,0 +1,14 @@
+package com.ebustillos.msnegociogestionusuarios.mappers;
+
+import java.util.List;
+
+import com.ebustillos.msnegociogestionusuarios.dto.UsuarioDto;
+import com.ebustillos.msnegociogestionusuarios.entity.UsuarioEntity;
+
+public interface UsuarioMapper {
+
+	PedidoDto toDTO(UsuarioEntity e);
+	
+	List<PedidoDto> toDTO(List<UsuarioEntity>lst);
+	
+}

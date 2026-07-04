@@ -1,0 +1,27 @@
+package com.ebustillos.ms.negocio.gestionpedidos.mappers;
+
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.ebustillos.msnegociogestionusuarios.dto.UsuarioDto;
+import com.ebustillos.msnegociogestionusuarios.entity.UsuarioEntity;
+
+
+@Component
+public class PedidoMapperImpl implements PedidoMapper {
+
+	@Override
+	public PedidoDto toDTO(PedidoEntity e) {
+		return PedidoDto.builder()
+							.id(e.getId())
+							.name(e.getName())
+							.lastName(e.getLastName()).build();
+	}
+
+	@Override
+	public List<PedidoDto> toDTO(List<PedidoEntity> lst) {
+		return lst.stream().map(e -> toDTO(e)).toList();
+	}
+
+}

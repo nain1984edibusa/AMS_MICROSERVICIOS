@@ -1,0 +1,1 @@
+INSERT INTO tbl_cliente(razon_social,ruc,direccion,telefono,correo)VALUES('Eduardo Bustillos','0603401662001','Albornoz y Quezada','0995728605','edibusa_1991@hotmail.com');
