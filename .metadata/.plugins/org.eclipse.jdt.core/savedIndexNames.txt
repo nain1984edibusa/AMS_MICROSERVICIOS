@@ -4,7 +4,6 @@ INDEX VERSION 1.134+C:\AmbDesarrollo\AMS_MICROSERVICIOS\.metadata\.plugins\org.e
 2782675156.index
 4273331632.index
 421467458.index
-1649023686.index
 1563311983.index
 3094482914.index
 1959225928.index

@@ -2,6 +2,8 @@ package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes
 
 public class ServiceException extends Exception {
 
+	private static final long serialVersionUID = 1L;
+
 	public ServiceException() {
 		// TODO Auto-generated constructor stub
 	}
