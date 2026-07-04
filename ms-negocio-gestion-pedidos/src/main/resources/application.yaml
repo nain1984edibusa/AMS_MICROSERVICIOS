@@ -1,15 +1,23 @@
-server:
-   port: 8193
+# Toma la conf de eureka
 spring:
   application:
     name: ms-negocio-gestion-pedidos
-  datasource: 
-    url: jdbc:sqlserver://localhost;trustServerCertificate=true;databaseName=db_ms_pedidos
-    username: sa
-    password: P@ssword1234
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  jpa: 
-    database-platform: org.hibernate.dialect.SQLServer2012Dialect
-    hibernate: 
-      ddl-auto: none
-    show-sql: true  
+  config:
+        import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
+
+#Configuracion para ms funcione por separado
+#server:
+#   port: 8193
+#spring:
+#  application:
+#    name: ms-negocio-gestion-pedidos
+#  datasource: 
+#    url: jdbc:sqlserver://localhost;trustServerCertificate=true;databaseName=db_ms_pedidos
+#    username: sa
+#    password: P@ssword1234
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#  jpa: 
+#    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+#    hibernate: 
+#      ddl-auto: none
+#    show-sql: true  

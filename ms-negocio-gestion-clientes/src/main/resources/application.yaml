@@ -1,25 +1,25 @@
-#spring:
-#  application:
-#    name: ms-negocio-gestion-clientes
-#  config:
-#        import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
-        
-server:
-   port: 8190
-   
 spring:
   application:
     name: ms-negocio-gestion-clientes
-  datasource: 
-    url: jdbc:mysql://localhost:3308/db_ms_clientes?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-    username: userdev
-    password: Test@123
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa: 
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate: 
-      ddl-auto: create
-    show-sql: true 
+  config:
+        import: ${SPRING_CONFIG_IMPORT:optional:configserver:http://localhost:8888}
+        
+#server:
+#   port: 8190
+#   
+#spring:
+#  application:
+#    name: ms-negocio-gestion-clientes
+#  datasource: 
+#    url: jdbc:mysql://localhost:3308/db_ms_clientes?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+#    username: userdev
+#    password: Test@123
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa: 
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    hibernate: 
+#      ddl-auto: create
+#    show-sql: true 
         
 # Para dockerizar
 #  config:
