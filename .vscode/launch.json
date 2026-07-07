@@ -27,7 +27,8 @@
             "name": "MsAdministracionServerRegistryApplication",
             "request": "launch",
             "mainClass": "com.ebustillos.ms.administracion.serverregistry.MsAdministracionServerRegistryApplication",
-            "projectName": "ms-administracion-server-registry"
+            "projectName": "ms-administracion-server-registry",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=15615 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ms-administracion-server-registry"
         },
         {
             "type": "java",
@@ -100,6 +101,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.ebustillos.ms.negocio.gestionpedidos.MsNegocioGestionPedidosApplication",
             "projectName": "ms-negocio-gestion-pedidos",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsNegocioGestionClientesApplication<ms-negocio-gestion-clientes>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ebustillos.ms.negocio.gestionclientes.MsNegocioGestionClientesApplication",
+            "projectName": "ms-negocio-gestion-clientes",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
