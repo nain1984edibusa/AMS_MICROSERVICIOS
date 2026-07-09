@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class PedidoDto {
     private Long idPedido;
     private Long idCliente;
-    private ClienteDto clienteDTO;
+    private ClienteDto clienteDto;
     private String resumen;
     private Double total;
     private List<DetallePedidoDto> listDetallePedido;

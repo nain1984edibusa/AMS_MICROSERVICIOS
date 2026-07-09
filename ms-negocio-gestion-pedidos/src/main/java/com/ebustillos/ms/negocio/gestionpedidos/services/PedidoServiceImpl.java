@@ -9,6 +9,8 @@ import com.ebustillos.ms.negocio.gestionpedidos.mappers.*;
 import com.ebustillos.ms.negocio.gestionpedidos.repository.*;
 import com.ebustillos.ms.negocio.gestionpedidos.services.client.clientes.ClienteDto;
 import com.ebustillos.ms.negocio.gestionpedidos.services.client.clientes.ClienteService;
+import com.ebustillos.ms.negocio.gestionpedidos.services.client.productos.ProductoDto;
+import com.ebustillos.ms.negocio.gestionpedidos.services.client.productos.ProductoService;
 
 @Service
 public class PedidoServiceImpl implements PedidoService {
@@ -16,11 +18,13 @@ public class PedidoServiceImpl implements PedidoService {
 	private final PedidoRepository pedidoRepository;
 	private final PedidoMapper pedidoMapper;
 	private final ClienteService clienteService;
+	private final ProductoService productoService;
 
-	public PedidoServiceImpl(final PedidoRepository pedidoRepository, final PedidoMapper pedidoMapper, final ClienteService clienteService) {
+	public PedidoServiceImpl(final PedidoRepository pedidoRepository, final PedidoMapper pedidoMapper, final ClienteService clienteService, final ProductoService productoService) {
 		this.pedidoRepository = pedidoRepository;
 		this.pedidoMapper = pedidoMapper;
 		this.clienteService = clienteService;
+		this.productoService = productoService;
 	}
 	
 	@Override
@@ -30,9 +34,17 @@ public class PedidoServiceImpl implements PedidoService {
 			if (optPedidoEntity.isPresent()) {
 				PedidoEntity pedidoEntity = optPedidoEntity.get();
 				PedidoDto pedidoDto = pedidoMapper.toDTO(pedidoEntity); 
+				// Composición con Cliente
 				ClienteDto clienteDTO = clienteService.findById(pedidoDto.getIdCliente());
+				pedidoDto.setClienteDto(clienteDTO);
 				
-				pedidoDto.setClienteDTO(clienteDTO);
+				// Composición con Producto (para cada detalle)
+	            if (pedidoDto.getListDetallePedido() != null) {
+	                pedidoDto.getListDetallePedido().forEach(detalle -> {
+	                    ProductoDto productoDto = productoService.findById(detalle.getIdProducto());
+						detalle.setProductoDto(productoDto);
+	                });
+	            }
 
 				return Optional.ofNullable(pedidoDto);
 			}
