@@ -2,7 +2,6 @@ package com.ebustillos.ms.negocio.gestionpedidos.services.client.clientes;
 
 import java.util.List;
 import java.util.Objects;
-
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.context.annotation.Bean;
