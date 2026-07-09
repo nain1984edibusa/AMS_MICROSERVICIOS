@@ -32,7 +32,7 @@
           "response": []
         },
         {
-          "name": "obtenerCliente",
+          "name": "obtener-cliente",
           "request": {
             "method": "GET",
             "header": [],
@@ -56,56 +56,56 @@
       ]
     },
     {
-      "name": "ms-negocio-gestion-usuarios",
+      "name": "ms-negocio-gestion-productos",
       "item": [
         {
-          "name": "ms-negocio-gestion-pedidos",
-          "item": [
-            {
-              "name": "pedidos",
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "http://localhost:8193/api/v1/pedidos",
-                  "protocol": "http",
-                  "host": [
-                    "localhost"
-                  ],
-                  "port": "8193",
-                  "path": [
-                    "api",
-                    "v1",
-                    "pedidos"
-                  ]
-                }
-              },
-              "response": []
-            },
-            {
-              "name": "obtenerPedido",
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "http://localhost:8193/api/v1/pedidos/9",
-                  "protocol": "http",
-                  "host": [
-                    "localhost"
-                  ],
-                  "port": "8193",
-                  "path": [
-                    "api",
-                    "v1",
-                    "pedidos",
-                    "9"
-                  ]
-                }
-              },
-              "response": []
+          "name": "productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8191/api/v1/productos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8191",
+              "path": [
+                "api",
+                "v1",
+                "productos"
+              ]
             }
-          ]
+          },
+          "response": []
         },
+        {
+          "name": "obtener-producto",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8191/api/v1/productos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8191",
+              "path": [
+                "api",
+                "v1",
+                "productos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ms-negocio-gestion-usuarios",
+      "item": [
         {
           "name": "usuarios",
           "request": {
@@ -122,6 +122,66 @@
                 "api",
                 "v1",
                 "usuarios"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ms-negocio-gestion-pedidos",
+      "item": [
+        {
+          "name": "pedidos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8193/api/v1/pedidos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8193",
+              "path": [
+                "api",
+                "v1",
+                "pedidos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "obtener-pedido",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8193/api/v1/pedidos/10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8193",
+              "path": [
+                "api",
+                "v1",
+                "pedidos",
+                "10"
               ]
             }
           },

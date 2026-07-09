@@ -1,4 +1,4 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.repository;
+package com.ebustillos.ms.negocio.gestionproductos.repository;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.entity.ProductoEntity;
+import com.ebustillos.ms.negocio.gestionproductos.entity.ProductoEntity;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<ProductoEntity, Long>{

@@ -1,11 +1,9 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.mappers;
+package com.ebustillos.ms.negocio.gestionproductos.mappers;
 
 import java.util.List;
-
 import org.springframework.stereotype.Component;
-
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.dto.ProductoDTO;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.entity.ProductoEntity;
+import com.ebustillos.ms.negocio.gestionproductos.dto.ProductoDTO;
+import com.ebustillos.ms.negocio.gestionproductos.entity.ProductoEntity;
 
 @Component
 public class ProductoMapperImpl implements ProductoMapper {

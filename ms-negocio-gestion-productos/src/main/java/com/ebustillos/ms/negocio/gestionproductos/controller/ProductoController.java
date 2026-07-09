@@ -1,4 +1,4 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.controller;
+package com.ebustillos.ms.negocio.gestionproductos.controller;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.dto.ProductoDTO;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.services.ProductoService;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.services.ServiceException;
+import com.ebustillos.ms.negocio.gestionproductos.dto.ProductoDTO;
+import com.ebustillos.ms.negocio.gestionproductos.services.ProductoService;
+import com.ebustillos.ms.negocio.gestionproductos.services.ServiceException;
 
 @RestController
 @RequestMapping("api/v1/productos")

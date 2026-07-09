@@ -1,7 +1,6 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.entity;
+package com.ebustillos.ms.negocio.gestionproductos.entity;
 
 import java.io.Serializable;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

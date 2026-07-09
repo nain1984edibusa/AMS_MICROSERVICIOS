@@ -1,4 +1,4 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.services;
+package com.ebustillos.ms.negocio.gestionproductos.services;
 
 import java.util.List;
 import java.util.Optional;

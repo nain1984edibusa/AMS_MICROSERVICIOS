@@ -1,4 +1,4 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.dto;
+package com.ebustillos.ms.negocio.gestionproductos.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

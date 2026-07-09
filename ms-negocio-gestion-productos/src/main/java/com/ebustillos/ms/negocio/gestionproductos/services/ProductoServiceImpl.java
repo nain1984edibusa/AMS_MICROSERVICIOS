@@ -1,14 +1,12 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.services;
+package com.ebustillos.ms.negocio.gestionproductos.services;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-
 import lombok.RequiredArgsConstructor;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.dto.ProductoDTO;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.mappers.ProductoMapper;
-import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.repository.ProductoRepository;
+import com.ebustillos.ms.negocio.gestionproductos.dto.ProductoDTO;
+import com.ebustillos.ms.negocio.gestionproductos.mappers.ProductoMapper;
+import com.ebustillos.ms.negocio.gestionproductos.repository.ProductoRepository;
 
 @RequiredArgsConstructor
 @Service

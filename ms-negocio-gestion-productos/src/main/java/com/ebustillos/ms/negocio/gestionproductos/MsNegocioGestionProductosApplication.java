@@ -1,4 +1,4 @@
-package pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes;
+package com.ebustillos.ms.negocio.gestionproductos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 //@EnableEurekaClient
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MsNegocioGestionClientesApplication {
+public class MsNegocioGestionProductosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsNegocioGestionClientesApplication.class, args);
+		SpringApplication.run(MsNegocioGestionProductosApplication.class, args);
 	}
 }
