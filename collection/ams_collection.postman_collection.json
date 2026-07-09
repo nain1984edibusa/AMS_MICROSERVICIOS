@@ -171,7 +171,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8193/api/v1/pedidos/10",
+              "raw": "http://localhost:8193/api/v1/pedidos/1",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -181,7 +181,7 @@
                 "api",
                 "v1",
                 "pedidos",
-                "10"
+                "1"
               ]
             }
           },
