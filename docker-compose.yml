@@ -118,11 +118,19 @@ services:
     container_name: sqlserver
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
-      - ACCEPT_EULA= "Y"
-      - MSSQL_SA_PASSWORD=P@ssword1234    
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "P@ssword1234"    
     ports:
       - 1433:1433    
-    mem_limit: 2g
+    mem_limit: 4g
+    restart: unless-stopped
+    volumes:
+      # Archivos de la base (.mdf y .ldf)
+      - D:/SQLServer/data:/var/opt/mssql/data
+      # Carpeta donde está el .bak
+      - D:/SQLServer/BD:/backups
+      # Logs de SQL Server
+      - D:/SQLServer/logs:/var/opt/mssql/log
     networks:
       - microservicios 
 networks:
