@@ -20,7 +20,7 @@ COPY build/libs/ms-negocio-gestion-productos*.jar ms-negocio-gestion-productos.j
 # Expone el puerto 8080 (solo informativo)
 # Indica que la aplicación Spring Boot escuchará en ese puerto
 # No publica el puerto, eso se hace en docker run o docker-compose
-EXPOSE 8091
+EXPOSE 8191
 
 # Comando que se ejecuta al iniciar el contenedor
 # Ejecuta el JAR usando la JVM

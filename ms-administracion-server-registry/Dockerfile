@@ -3,7 +3,7 @@
 FROM eclipse-temurin:17-jdk
 
 # Metadatos del contenedor (no afectan ejecución, pero útiles para trazabilidad)
-LABEL name="MS Gestión Usuarios"
+LABEL name="MS Server Registry"
 LABEL version="1.0"
 LABEL description="Microservicio de server registry"
 

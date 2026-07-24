@@ -7,9 +7,9 @@ services:
       context: ./ms-administracion-server-config
       dockerfile: Dockerfile
     ports:
-      - "18888:8888"
-    volumes:
-      - ./config-repo:/config   # 👈 CLAVE
+      - "8888:8888"
+    # volumes:
+    #   - ./config-repo:/config   # 👈 CLAVE
     networks:
       - microservicios
   eureka-server:
@@ -19,7 +19,11 @@ services:
       context: ./ms-administracion-server-registry
       dockerfile: Dockerfile
     ports:
-      - "18889:8889"
+      - "8889:8889"
+    environment:
+      SPRING_CONFIG_IMPORT: optional:configserver:http://server-config:8888
+    depends_on:
+      - server-config
     networks:
       - microservicios
 
@@ -41,7 +45,9 @@ services:
       context: ./ms-negocio-gestion-clientes
       dockerfile: Dockerfile
     ports:
-      - "8090:8090"
+      - "8190:8190"
+    environment:
+      SPRING_CONFIG_IMPORT: optional:configserver:http://server-config:8888
     depends_on:
       - mysql_clientes_dev
       - eureka-server
@@ -56,14 +62,13 @@ services:
       context: ./ms-negocio-gestion-productos
       dockerfile: Dockerfile
     ports:
-      - "8091:8091"
+      - "8191:8191"
+    environment: 
+      SPRING_CONFIG_IMPORT: optional:configserver:http://server-config:8888
     depends_on:
-      mysql_productos_dev:
-        condition: service_healthy
-      eureka-server:
-        condition: service_started
-      server-config:
-        condition: service_started
+      - mysql_clientes_dev
+      - eureka-server
+      - server-config
     networks:
       - microservicios
 

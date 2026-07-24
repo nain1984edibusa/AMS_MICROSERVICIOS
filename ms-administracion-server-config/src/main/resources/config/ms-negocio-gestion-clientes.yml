@@ -1,48 +1,24 @@
 server:
    port: 8190
 spring:
-  datasource: 
-    url: jdbc:mysql://localhost:3308/db_ms_clientes?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-    username: userdev
-    password: Test@123
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa: 
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate: 
-      ddl-auto: create
-    show-sql: true  
-    
+ datasource: 
+   url: jdbc:mysql://mysql_clientes_dev:3306/db_ms_clientes?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+   username: userdev
+   password: Test@123
+   driver-class-name: com.mysql.cj.jdbc.Driver
+ jpa: 
+   database-platform: org.hibernate.dialect.MySQL8Dialect
+   hibernate: 
+     ddl-auto: create
+   show-sql: true  
+   
 # Server Registry Client
 eureka:
-   client:
-      register-with-eureka: true
-      fetch-registry: true
-      serviceUrl:
-         defaultZone: http://localhost:8889/eureka/
-   instance:
-      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}  	
-      prefer-ip-address: true
-
-#configuracion docker
-#spring:
-#  datasource: 
-#    url: jdbc:mysql://mysql_clientes_dev:3306/db_ms_clientes?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
-#    username: userdev
-#    password: Test@123
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#  jpa: 
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#    hibernate: 
-#      ddl-auto: create
-#    show-sql: true  
-#    
-## Server Registry Client
-#eureka:
-#   client:
-#      register-with-eureka: true
-#      fetch-registry: true
-#      serviceUrl:
-#         defaultZone: http://eureka-server:8889/eureka
-#   instance:
-#      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}  	
-#      prefer-ip-address: true
+  client:
+     register-with-eureka: true
+     fetch-registry: true
+     serviceUrl:
+        defaultZone: http://eureka-server:8889/eureka
+  instance:
+     instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}  	
+     prefer-ip-address: true
